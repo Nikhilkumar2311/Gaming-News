@@ -2,35 +2,39 @@
 
 body {
   margin: 0;
-  background-color: #f7f7f7;
-  color: #333;
+  background-color: #ffffff;
+  color: #111827;
+  /* Default dark gray text */
   font-family: 'Roboto', sans-serif;
 }
 
 h1,
 h2,
 h3 {
-  color: #2d3748;
+  color: #111827;
+  /* Dark gray for headings */
 }
 
 a {
-  color: #3182ce;
+  color: #2d3748;
+  /* Dark gray for links */
   text-decoration: none;
 }
 
 a:hover {
-  color: #2b6cb0;
+  color: #4a5568;
+  /* Slightly lighter gray on hover */
   text-decoration: underline;
 }
 
 .prose {
-  color: #4a5568;
+  color: #6B7280;
+  /* Light gray for body text */
   max-width: 100%;
-  /* Ensure prose doesn't overflow */
 }
 
 .prose h2 {
-  color: #2d3748;
+  color: #111827;
 }
 
 .prose ul {
@@ -42,6 +46,32 @@ a:hover {
   content: none;
 }
 
+.header-link {
+  color: white !important;
+}
+
+.header-link:hover {
+  color: #e2e8f0 !important;
+}
+
+.header-link.text-\[\#F4796C\] {
+  color: #F4796C !important;
+}
+
+/* Ensure local styles override global defaults */
+@layer base {
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .dark-theme {
+    display: none;
+  }
+}
+
+/* Media query for dark mode */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #1a202c;
@@ -69,30 +99,12 @@ a:hover {
   .prose h2 {
     color: #e2e8f0;
   }
-}
 
-@layer base {
-  body {
-    @apply bg-gray-100 text-gray-800;
-  }
-}
-
-@layer components {
-  .dark-theme {
-    @apply bg-gray-900 text-gray-200;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    @apply bg-gray-900 text-gray-200;
+  .header-link {
+    color: white !important;
   }
 
-  a {
-    @apply text-blue-400 hover:text-blue-300;
-  }
-
-  .prose h2 {
-    @apply text-gray-100;
+  .header-link:hover {
+    color: #d1d5db !important;
   }
 }

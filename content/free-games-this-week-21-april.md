@@ -1,10 +1,10 @@
 ---
 title: "Free Games This Week - Claim Now in 2025"
 description: "Check out the best free games available this week in 2025..."
-slug: "free-games-this-week"
+slug: "free-games-this-week-21-april"
 date: "2025-04-09"
 author: "John Smith"
-image: "/images/free-games.jpg"
+image: "/images/27-april.jpg"
 read: "3-4 mins read"
 categoryName: "Games to Claim"
 category: "games-to-claim"
